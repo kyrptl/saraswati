@@ -12,54 +12,36 @@
  <link href="css/jquery.excoloSlider.css" rel="stylesheet">
  
  
-  <title>Sri Venkateswara Suprabhatam</title>
+<title>Saraswati Mantra and Saraswati Aarti</title>
 </head>
 
 <body onresize="app.onResize()">
-  <div id="fullpage" class="app">    
-    <div id="progressDialog" class="progressDialog hidden">
-      <div id="spinner"></div>
-      <span id="message">Playing...</span>
-    </div>
-	<div id="slider">
-    <img src="images/front.jpg">
-    <img src="images/image1.jpg">
-    <img src="images/image3.jpg">
-    <img src="images/image4.jpg">
-    <img src="images/image5.jpg">
-    <img src="images/image6.jpg">
-    <img src="images/image7.jpg">
-    <img src="images/image8.jpg">
+<div class="arti-main-text">	
+	<div id="select-arti">
+		<a href="saraswati.html"><img src="images/saraswati_change.jpg"></a>
+	</div>
+	<div id="select-arti1">
+		<a href="yakunde.html"><img src="images/yakunde_change.jpg"></a>		
+	</div>
 </div>
 
-
-<div class="player">
-	<audio controls autoplay loop id="myVideo">
-	  <source src="venkateswara.mp3" type="audio/mpeg">
-	</audio>
-</div>
-
-  </div>
-
-  <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript">
-    app.initialize();
-  </script>
-  
-<script>
-var vid = document.getElementById("myVideo");
-vid.onpause = function() {
-    app.requestInterstitial(true);
-};
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+   app.initialize();
 </script>
   
 <script>
-	$(function () {
-    $("#slider").excoloSlider();
-});
+	var vid = document.getElementById("select-arti");
+	vid.onclick = function() {		
+		app.requestInterstitial(true);
+	};
+	
+	var vid1 = document.getElementById("select-arti1");
+	vid1.onclick = function() {		
+		app.requestInterstitial(true);
+	};
 </script>
   
 </body>
-
 </html>
